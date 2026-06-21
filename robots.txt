@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /pages/login.html
+Disallow: /pages/signup.html
+Disallow: /pages/dashboard-user.html
+Disallow: /pages/dashboard-admin.html
+
+Sitemap: https://marquee-events.example/sitemap.xml

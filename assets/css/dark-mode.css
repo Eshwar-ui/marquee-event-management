@@ -1,0 +1,59 @@
+/* =============================================================
+   MARQUEE — dark-mode.css
+   .dark {} token overrides ONLY. No component rules here.
+   Near-black greens, never pure black. Text never pure white.
+   ============================================================= */
+.dark {
+  --color-bg:             oklch(0.180 0.018 155);
+  --color-bg-secondary:   oklch(0.220 0.022 155);
+  --color-bg-tertiary:    oklch(0.270 0.024 155);
+  --color-surface:        oklch(0.225 0.022 155);
+  --color-surface-dark:   oklch(0.160 0.018 155);
+  --color-surface-darker: oklch(0.130 0.016 155);
+
+  --color-primary:        oklch(0.720 0.075 150);
+  --color-primary-hover:  oklch(0.790 0.080 150);
+  --color-primary-soft:   oklch(0.320 0.040 155);
+
+  --color-accent:         oklch(0.760 0.090 82);
+  --color-accent-hover:   oklch(0.810 0.085 82);
+  --color-accent-soft:    oklch(0.330 0.045 80);
+
+  --color-text:           oklch(0.945 0.010 95);
+  --color-text-secondary: oklch(0.800 0.012 120);
+  --color-text-muted:     oklch(0.660 0.012 120);
+  --color-text-on-dark:   oklch(0.960 0.010 95);
+  --color-text-on-dark-mut:oklch(0.780 0.014 120);
+
+  --color-border:         oklch(0.330 0.022 155);
+  --color-border-strong:  oklch(0.400 0.026 155);
+  --color-border-dark:    oklch(0.300 0.020 155);
+
+  --color-success:        oklch(0.700 0.110 150);
+  --color-success-soft:   oklch(0.300 0.050 150);
+  --color-warning:        oklch(0.780 0.120 80);
+  --color-warning-soft:   oklch(0.320 0.055 80);
+  --color-danger:         oklch(0.680 0.140 25);
+  --color-danger-soft:    oklch(0.300 0.060 25);
+  --color-info:           oklch(0.700 0.090 230);
+  --color-info-soft:      oklch(0.300 0.050 230);
+
+  --shadow-xs: 0 1px 2px oklch(0 0 0 / 0.30);
+  --shadow-sm: 0 2px 8px oklch(0 0 0 / 0.35);
+  --shadow-md: 0 8px 24px oklch(0 0 0 / 0.45);
+  --shadow-lg: 0 18px 48px oklch(0 0 0 / 0.55);
+}
+
+/* Navbar glass needs a dark tint in dark mode */
+.dark .navbar { background: oklch(0.180 0.018 155 / 0.82); }
+
+/* Dashboard topbar uses a hardcoded light glass — override for dark mode */
+.dark .dash-topbar { background: oklch(0.200 0.020 155 / 0.85); }
+
+/* Logo swap (permitted Tailwind-free approach) */
+.dark .logo-light { display: none; }
+.dark .logo-dark { display: inline-block; }
+
+/* Theme toggle icon swap */
+.dark .theme-toggle .ti-moon { display: none; }
+.dark .theme-toggle .ti-sun { display: inline-block; }

@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marquee">
+  <rect width="48" height="48" rx="12" fill="oklch(0.300 0.045 155)"/>
+  <path d="M24 9C14.6 9 9 16 9 24v15h30V24c0-8-5.6-15-15-15Z" fill="oklch(0.345 0.050 155)"/>
+  <path d="M24 9C14.6 9 9 16 9 24c5.2 0 7.5-3.2 7.5-3.2S19 24 24 24s7.5-3.2 7.5-3.2S33.8 24 39 24c0-8-5.6-15-15-15Z" fill="oklch(0.700 0.090 80)"/>
+  <rect x="22" y="27" width="4" height="12" fill="oklch(0.972 0.012 95)"/>
+</svg>

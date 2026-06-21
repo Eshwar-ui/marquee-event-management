@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Journal — Event Planning Tips & Ideas | Marquee</title>
+  <meta name="description" content="The Marquee journal: planning guides, seasonal ideas, budgeting advice and venue inspiration from a working event management studio. Filter articles by topic." />
+  <link rel="canonical" href="https://marquee-events.example/blog.html" />
+  <meta name="theme-color" content="#27402f" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Journal — Event Planning Tips & Ideas | Marquee" />
+  <meta property="og:description" content="Planning guides, seasonal ideas and venue inspiration from the Marquee studio." />
+  <meta property="og:url" content="https://marquee-events.example/blog.html" />
+  <meta property="og:image" content="../assets/images/ui/og-image.svg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Journal — Event Planning Tips & Ideas | Marquee" />
+  <meta name="twitter:description" content="Planning guides, seasonal ideas and venue inspiration from the Marquee studio." />
+  <meta name="twitter:image" content="../assets/images/ui/og-image.svg" />
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/ui/favicon.svg" />
+  <link rel="apple-touch-icon" href="../assets/images/ui/apple-touch-icon.svg" />
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/Jost-Regular.woff2" crossorigin />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: { DEFAULT: 'var(--color-primary)' } } } } };</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('marquee-theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark');
+        if (localStorage.getItem('marquee-dir') === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Blog", "name": "Marquee Journal", "url": "https://marquee-events.example/blog.html", "description": "Event planning guides and inspiration from the Marquee studio." }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="preloader" id="preloader" aria-hidden="true"><div class="spinner"></div></div>
+
+  <!-- ============================ NAVBAR ============================ -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="Marquee home">
+          <img src="../assets/images/ui/logo.svg" alt="Marquee" class="logo-light" width="168" height="40" />
+          <img src="../assets/images/ui/logo-dark.svg" alt="Marquee" class="logo-dark" width="168" height="40" />
+        </a>
+        <nav class="navbar__links" aria-label="Primary">
+          <div class="navbar__dropdown">
+            <a href="index.html" class="navbar__link navbar__dropdown-toggle" data-nav="home" aria-haspopup="true" aria-expanded="false">Home <i class="ti ti-chevron-down" aria-hidden="true" style="font-size:16px"></i></a>
+            <div class="navbar__dropdown-menu">
+              <a href="index.html">Home 1</a>
+              <a href="index-2.html">Home 2</a>
+            </div>
+          </div>
+          <a href="about.html" class="navbar__link">About</a>
+          <a href="services.html" class="navbar__link">Services</a>
+          <a href="gallery.html" class="navbar__link">Gallery</a>
+          <a href="blog.html" class="navbar__link">Blog</a>
+          <a href="contact.html" class="navbar__link">Contact</a>
+          <div class="navbar__dropdown">
+            <a href="dashboard-user.html" class="navbar__link navbar__dropdown-toggle" data-nav="dashboard" aria-haspopup="true" aria-expanded="false">Dashboard <i class="ti ti-chevron-down" aria-hidden="true" style="font-size:16px"></i></a>
+            <div class="navbar__dropdown-menu">
+              <a href="dashboard-user.html">Client Dashboard</a>
+              <a href="dashboard-admin.html">Admin Dashboard</a>
+            </div>
+          </div>
+        </nav>
+        <div class="navbar__actions">
+          <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="ti ti-moon" aria-hidden="true"></i>
+            <i class="ti ti-sun" aria-hidden="true"></i>
+          </button>
+          <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle right-to-left layout">RTL</button>
+          <a href="login.html" class="navbar__link navbar__auth-link">Log in</a>
+          <a href="signup.html" class="btn btn--primary navbar__cta">Sign up <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+          <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="ti ti-menu-2" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu">
+      <div class="mobile-menu__inner">
+        <a href="index.html">Home 1</a>
+        <a href="index-2.html">Home 2</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard-user.html">Client Dashboard</a>
+        <a href="dashboard-admin.html">Admin Dashboard</a>
+        <a href="login.html">Log in</a>
+        <a href="signup.html" class="btn btn--primary mobile-menu__cta">Sign up <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- SECTION: PAGE HEADER -->
+    <section class="section-compact page-header" id="page-header">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center">The journal</span>
+        <h1>Notes from behind the scenes</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Journal</span></nav>
+      </div>
+    </section>
+    <!-- END SECTION: PAGE HEADER -->
+
+    <!-- SECTION: FEATURED POST -->
+    <section class="section-standard" id="featured-post">
+      <div class="container">
+        <article class="card reveal">
+          <div class="split" style="gap:0">
+            <div class="card__media" style="aspect-ratio:auto;min-height:280px"><img src="../assets/images/content/blog-featured.svg" alt="Planner reviewing a seasonal timeline" width="1200" height="700" loading="lazy" style="height:100%" /></div>
+            <div class="card__body" style="padding:var(--space-5);align-self:center">
+              <span class="pill pill--accent">Featured · Guide</span>
+              <h2 style="margin:var(--space-2) 0">The 12-month planning timeline that actually works</h2>
+              <p>A month-by-month breakdown of what to lock when, from venue and vendors to the final headcount, so nothing gets left to the last fortnight.</p>
+              <div class="person" style="margin-top:var(--space-3)"><img src="../assets/images/content/avatar-1.svg" alt="" class="avatar" width="48" height="48" /><span><span class="person__name">Elena Voss</span><br /><span class="person__role">8 min read · June 2026</span></span></div>
+              <a href="#" class="btn btn--ghost" style="margin-top:var(--space-3)">Read the guide <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- END SECTION: FEATURED POST -->
+
+    <!-- SECTION: POST GRID -->
+    <section class="section-standard surface-alt" id="post-grid">
+      <div class="container">
+        <div class="filter-bar" role="group" aria-label="Filter articles by topic">
+          <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="trends" aria-pressed="false">Trends</button>
+          <button class="filter-btn" data-filter="planning" aria-pressed="false">Planning</button>
+          <button class="filter-btn" data-filter="budget" aria-pressed="false">Budget</button>
+        </div>
+        <div class="grid grid-3" id="blog-grid">
+          <article class="card reveal" data-category="trends"><div class="card__media aspect-3-2"><img src="../assets/images/content/blog-1.svg" alt="Mood board of 2026 event trends" width="900" height="600" loading="lazy" /></div><div class="card__body"><span class="pill">Trends</span><h3 class="card__title" style="margin:var(--space-1) 0">Six event trends shaping 2026</h3><p style="font-size:var(--fs-small)">What couples and brands are asking for this year, and what is quietly on its way out.</p><div class="person" style="margin-top:var(--space-2)"><span class="person__role">5 min read</span></div></div></article>
+          <article class="card reveal reveal-delay-1" data-category="planning"><div class="card__media aspect-3-2"><img src="../assets/images/content/blog-2.svg" alt="Seasonal florals on a table" width="900" height="600" loading="lazy" /></div><div class="card__body"><span class="pill">Planning</span><h3 class="card__title" style="margin:var(--space-1) 0">A seasonal guide to florals</h3><p style="font-size:var(--fs-small)">How to choose blooms that are in season, in budget and in keeping with your palette.</p><div class="person" style="margin-top:var(--space-2)"><span class="person__role">6 min read</span></div></div></article>
+          <article class="card reveal reveal-delay-2" data-category="budget"><div class="card__media aspect-3-2"><img src="../assets/images/content/blog-3.svg" alt="Budget spreadsheet and calculator" width="900" height="600" loading="lazy" /></div><div class="card__body"><span class="pill">Budget</span><h3 class="card__title" style="margin:var(--space-1) 0">Where event budgets really go</h3><p style="font-size:var(--fs-small)">The line items people underestimate, and a sane way to build in contingency.</p><div class="person" style="margin-top:var(--space-2)"><span class="person__role">4 min read</span></div></div></article>
+          <article class="card reveal" data-category="planning"><div class="card__media aspect-3-2"><img src="../assets/images/content/blog-4.svg" alt="Shortlist of venues" width="900" height="600" loading="lazy" /></div><div class="card__body"><span class="pill">Planning</span><h3 class="card__title" style="margin:var(--space-1) 0">Choosing the right venue</h3><p style="font-size:var(--fs-small)">Ten questions to ask on every site visit before you fall for the view.</p><div class="person" style="margin-top:var(--space-2)"><span class="person__role">7 min read</span></div></div></article>
+          <article class="card reveal reveal-delay-1" data-category="trends"><div class="card__media aspect-3-2"><img src="../assets/images/content/blog-5.svg" alt="Guests enjoying an event experience" width="900" height="600" loading="lazy" /></div><div class="card__body"><span class="pill">Trends</span><h3 class="card__title" style="margin:var(--space-1) 0">Designing the guest experience</h3><p style="font-size:var(--fs-small)">Small touches that guests remember long after the last dance.</p><div class="person" style="margin-top:var(--space-2)"><span class="person__role">5 min read</span></div></div></article>
+          <article class="card reveal reveal-delay-2" data-category="budget"><div class="card__media aspect-3-2"><img src="../assets/images/content/blog-6.svg" alt="Timeline planning notes" width="900" height="600" loading="lazy" /></div><div class="card__body"><span class="pill">Budget</span><h3 class="card__title" style="margin:var(--space-1) 0">Cutting costs without cutting magic</h3><p style="font-size:var(--fs-small)">Where to trim a budget so guests never feel the difference.</p><div class="person" style="margin-top:var(--space-2)"><span class="person__role">6 min read</span></div></div></article>
+        </div>
+        <p id="blog-grid-empty" style="display:none;text-align:center;color:var(--color-text-muted);margin-top:var(--space-4)">No articles in this topic yet.</p>
+
+        <nav class="pagination" aria-label="Blog pagination">
+          <a href="#" aria-label="Previous page"><i class="ti ti-arrow-left" aria-hidden="true"></i></a>
+          <span aria-current="page">1</span>
+          <a href="#" aria-label="Page 2">2</a>
+          <a href="#" aria-label="Page 3">3</a>
+          <a href="#" aria-label="Next page"><i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+        </nav>
+      </div>
+    </section>
+    <!-- END SECTION: POST GRID -->
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="../assets/images/ui/logo-dark.svg" alt="Marquee" width="168" height="40" />
+          <p>A full-service event management studio planning weddings, corporate events and private celebrations from concept to final toast.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Marquee on Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Marquee on Pinterest"><i class="ti ti-brand-pinterest" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Marquee on LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="blog.html">Journal</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <a href="services.html">Weddings</a>
+          <a href="services.html">Corporate</a>
+          <a href="services.html">Galas</a>
+          <a href="services.html">Private parties</a>
+        </div>
+        <div class="footer__col">
+          <h4>Stay in touch</h4>
+          <p style="font-size:var(--fs-small)">Seasonal planning notes and venue finds, a few times a year.</p>
+          <form class="footer__news" id="newsletter-form" novalidate>
+            <label for="news-email" class="sr-only">Email address</label>
+            <input type="email" id="news-email" name="email" placeholder="you@email.com" autocomplete="email" />
+            <button type="submit" class="btn btn--accent btn--block">Subscribe</button>
+            <span class="field__error" id="news-error" role="alert" aria-live="polite"></span>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Marquee Events Ltd. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="ti ti-arrow-up" aria-hidden="true"></i></button>
+  <div class="cookie" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <p>We use a few cookies to understand how the site is used and to remember your theme. No tracking nonsense.</p>
+    <div class="cookie__actions">
+      <button class="btn btn--ghost" id="cookie-decline">Decline</button>
+      <button class="btn btn--primary" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+  <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

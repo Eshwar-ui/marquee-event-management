@@ -1,0 +1,6 @@
+<svg width="168" height="40" viewBox="0 0 168 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marquee">
+  <path d="M20 4C11.2 4 4 10.8 4 19.2V36h32V19.2C36 10.8 28.8 4 20 4Z" fill="oklch(0.945 0.010 95)"/>
+  <path d="M20 4C11.2 4 4 10.8 4 19.2c5.4 0 8-3.4 8-3.4s2.6 3.4 8 3.4 8-3.4 8-3.4 2.6 3.4 8 3.4C36 10.8 28.8 4 20 4Z" fill="oklch(0.700 0.090 80)"/>
+  <rect x="18" y="22" width="4" height="14" fill="oklch(0.160 0.018 155)"/>
+  <text x="48" y="27" font-family="'Cormorant Garamond', Georgia, serif" font-size="26" font-weight="600" letter-spacing="0.5" fill="oklch(0.960 0.010 95)">Marquee</text>
+</svg>

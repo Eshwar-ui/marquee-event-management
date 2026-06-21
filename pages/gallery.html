@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Gallery — Past Events by Marquee</title>
+  <meta name="description" content="Browse a gallery of past Marquee events: weddings, corporate launches, galas and private celebrations. Filter by event type to see the breadth of work we deliver." />
+  <link rel="canonical" href="https://marquee-events.example/gallery.html" />
+  <meta name="theme-color" content="#27402f" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gallery — Past Events by Marquee" />
+  <meta property="og:description" content="A gallery of past Marquee events: weddings, corporate launches, galas and private celebrations." />
+  <meta property="og:url" content="https://marquee-events.example/gallery.html" />
+  <meta property="og:image" content="../assets/images/ui/og-image.svg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery — Past Events by Marquee" />
+  <meta name="twitter:description" content="A gallery of past Marquee events across every occasion." />
+  <meta name="twitter:image" content="../assets/images/ui/og-image.svg" />
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/ui/favicon.svg" />
+  <link rel="apple-touch-icon" href="../assets/images/ui/apple-touch-icon.svg" />
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/Jost-Regular.woff2" crossorigin />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: { DEFAULT: 'var(--color-primary)' } } } } };</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('marquee-theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark');
+        if (localStorage.getItem('marquee-dir') === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "CollectionPage", "name": "Marquee Event Gallery", "url": "https://marquee-events.example/gallery.html", "description": "Past events delivered by Marquee across weddings, corporate, galas and private celebrations." }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="preloader" id="preloader" aria-hidden="true"><div class="spinner"></div></div>
+
+  <!-- ============================ NAVBAR ============================ -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="Marquee home">
+          <img src="../assets/images/ui/logo.svg" alt="Marquee" class="logo-light" width="168" height="40" />
+          <img src="../assets/images/ui/logo-dark.svg" alt="Marquee" class="logo-dark" width="168" height="40" />
+        </a>
+        <nav class="navbar__links" aria-label="Primary">
+          <div class="navbar__dropdown">
+            <a href="index.html" class="navbar__link navbar__dropdown-toggle" data-nav="home" aria-haspopup="true" aria-expanded="false">Home <i class="ti ti-chevron-down" aria-hidden="true" style="font-size:16px"></i></a>
+            <div class="navbar__dropdown-menu">
+              <a href="index.html">Home 1</a>
+              <a href="index-2.html">Home 2</a>
+            </div>
+          </div>
+          <a href="about.html" class="navbar__link">About</a>
+          <a href="services.html" class="navbar__link">Services</a>
+          <a href="gallery.html" class="navbar__link">Gallery</a>
+          <a href="blog.html" class="navbar__link">Blog</a>
+          <a href="contact.html" class="navbar__link">Contact</a>
+          <div class="navbar__dropdown">
+            <a href="dashboard-user.html" class="navbar__link navbar__dropdown-toggle" data-nav="dashboard" aria-haspopup="true" aria-expanded="false">Dashboard <i class="ti ti-chevron-down" aria-hidden="true" style="font-size:16px"></i></a>
+            <div class="navbar__dropdown-menu">
+              <a href="dashboard-user.html">Client Dashboard</a>
+              <a href="dashboard-admin.html">Admin Dashboard</a>
+            </div>
+          </div>
+        </nav>
+        <div class="navbar__actions">
+          <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="ti ti-moon" aria-hidden="true"></i>
+            <i class="ti ti-sun" aria-hidden="true"></i>
+          </button>
+          <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle right-to-left layout">RTL</button>
+          <a href="login.html" class="navbar__link navbar__auth-link">Log in</a>
+          <a href="signup.html" class="btn btn--primary navbar__cta">Sign up <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+          <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="ti ti-menu-2" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu">
+      <div class="mobile-menu__inner">
+        <a href="index.html">Home 1</a>
+        <a href="index-2.html">Home 2</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard-user.html">Client Dashboard</a>
+        <a href="dashboard-admin.html">Admin Dashboard</a>
+        <a href="login.html">Log in</a>
+        <a href="signup.html" class="btn btn--primary mobile-menu__cta">Sign up <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- SECTION: PAGE HEADER -->
+    <section class="section-compact page-header" id="page-header">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center">Past events</span>
+        <h1>Fifteen years of gatherings</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Gallery</span></nav>
+      </div>
+    </section>
+    <!-- END SECTION: PAGE HEADER -->
+
+    <!-- SECTION: GALLERY -->
+    <section class="section-standard" id="gallery">
+      <div class="container">
+        <div class="filter-bar" role="group" aria-label="Filter events by type">
+          <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="wedding" aria-pressed="false">Weddings</button>
+          <button class="filter-btn" data-filter="corporate" aria-pressed="false">Corporate</button>
+          <button class="filter-btn" data-filter="gala" aria-pressed="false">Galas</button>
+          <button class="filter-btn" data-filter="private" aria-pressed="false">Private</button>
+        </div>
+        <div class="masonry" id="gallery-grid">
+          <figure class="card reveal" data-category="wedding"><div class="card__media aspect-4-3"><img src="../assets/images/content/gallery-1.svg" alt="Garden estate wedding under a floral arch" width="800" height="1000" loading="lazy" /></div><figcaption class="card__body"><span class="pill">Wedding</span><h3 class="card__title" style="margin-top:var(--space-1);font-size:var(--fs-lg)">Eloise & Ravi</h3></figcaption></figure>
+          <figure class="card reveal" data-category="corporate"><div class="card__media aspect-3-2"><img src="../assets/images/content/gallery-2.svg" alt="Corporate product launch stage" width="800" height="600" loading="lazy" /></div><figcaption class="card__body"><span class="pill">Corporate</span><h3 class="card__title" style="margin-top:var(--space-1);font-size:var(--fs-lg)">Northwind Launch</h3></figcaption></figure>
+          <figure class="card reveal" data-category="gala"><div class="card__media aspect-1-1"><img src="../assets/images/content/gallery-3.svg" alt="Charity gala in a grand hall" width="800" height="800" loading="lazy" /></div><figcaption class="card__body"><span class="pill">Gala</span><h3 class="card__title" style="margin-top:var(--space-1);font-size:var(--fs-lg)">Lumen Foundation</h3></figcaption></figure>
+          <figure class="card reveal" data-category="private"><div class="card__media aspect-3-2"><img src="../assets/images/content/gallery-4.svg" alt="Milestone birthday celebration" width="800" height="600" loading="lazy" /></div><figcaption class="card__body"><span class="pill">Private</span><h3 class="card__title" style="margin-top:var(--space-1);font-size:var(--fs-lg)">A 60th Birthday</h3></figcaption></figure>
+          <figure class="card reveal" data-category="private"><div class="card__media aspect-4-3"><img src="../assets/images/content/gallery-5.svg" alt="Vineyard long-table dinner" width="800" height="1000" loading="lazy" /></div><figcaption class="card__body"><span class="pill">Private</span><h3 class="card__title" style="margin-top:var(--space-1);font-size:var(--fs-lg)">Vineyard Anniversary</h3></figcaption></figure>
+          <figure class="card reveal" data-category="wedding"><div class="card__media aspect-3-2"><img src="../assets/images/content/gallery-6.svg" alt="Outdoor wedding reception" width="800" height="700" loading="lazy" /></div><figcaption class="card__body"><span class="pill">Wedding</span><h3 class="card__title" style="margin-top:var(--space-1);font-size:var(--fs-lg)">Marcus & Tom</h3></figcaption></figure>
+          <figure class="card reveal" data-category="corporate"><div class="card__media aspect-3-2"><img src="../assets/images/content/gallery-7.svg" alt="Conference main session" width="800" height="600" loading="lazy" /></div><figcaption class="card__body"><span class="pill">Corporate</span><h3 class="card__title" style="margin-top:var(--space-1);font-size:var(--fs-lg)">Helios Conference</h3></figcaption></figure>
+          <figure class="card reveal" data-category="wedding"><div class="card__media aspect-1-1"><img src="../assets/images/content/gallery-8.svg" alt="Wedding reception dinner" width="800" height="900" loading="lazy" /></div><figcaption class="card__body"><span class="pill">Wedding</span><h3 class="card__title" style="margin-top:var(--space-1);font-size:var(--fs-lg)">Coastal Reception</h3></figcaption></figure>
+          <figure class="card reveal" data-category="gala"><div class="card__media aspect-3-2"><img src="../assets/images/content/gallery-9.svg" alt="Awards night ceremony" width="800" height="700" loading="lazy" /></div><figcaption class="card__body"><span class="pill">Gala</span><h3 class="card__title" style="margin-top:var(--space-1);font-size:var(--fs-lg)">Industry Awards</h3></figcaption></figure>
+        </div>
+        <p id="gallery-empty" style="display:none;text-align:center;color:var(--color-text-muted);margin-top:var(--space-4)">No events in this category yet.</p>
+      </div>
+    </section>
+    <!-- END SECTION: GALLERY -->
+
+    <!-- SECTION: CTA (dark) -->
+    <section class="section-standard surface-dark" id="cta">
+      <div class="container" style="text-align:center">
+        <span class="eyebrow" style="justify-content:center">Your event next</span>
+        <h2 style="margin:var(--space-2) auto var(--space-3);max-width:20ch">Picture yours among these</h2>
+        <a href="contact.html" class="btn btn--accent btn--lg">Plan your event <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </section>
+    <!-- END SECTION: CTA -->
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="../assets/images/ui/logo-dark.svg" alt="Marquee" width="168" height="40" />
+          <p>A full-service event management studio planning weddings, corporate events and private celebrations from concept to final toast.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Marquee on Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Marquee on Pinterest"><i class="ti ti-brand-pinterest" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Marquee on LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="blog.html">Journal</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <a href="services.html">Weddings</a>
+          <a href="services.html">Corporate</a>
+          <a href="services.html">Galas</a>
+          <a href="services.html">Private parties</a>
+        </div>
+        <div class="footer__col">
+          <h4>Stay in touch</h4>
+          <p style="font-size:var(--fs-small)">Seasonal planning notes and venue finds, a few times a year.</p>
+          <form class="footer__news" id="newsletter-form" novalidate>
+            <label for="news-email" class="sr-only">Email address</label>
+            <input type="email" id="news-email" name="email" placeholder="you@email.com" autocomplete="email" />
+            <button type="submit" class="btn btn--accent btn--block">Subscribe</button>
+            <span class="field__error" id="news-error" role="alert" aria-live="polite"></span>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Marquee Events Ltd. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="ti ti-arrow-up" aria-hidden="true"></i></button>
+  <div class="cookie" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <p>We use a few cookies to understand how the site is used and to remember your theme. No tracking nonsense.</p>
+    <div class="cookie__actions">
+      <button class="btn btn--ghost" id="cookie-decline">Decline</button>
+      <button class="btn btn--primary" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+  <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

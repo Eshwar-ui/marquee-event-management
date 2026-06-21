@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Marquee — Event Packages & Signature Celebrations</title>
+  <meta name="description" content="Explore Marquee's signature event packages for weddings, corporate functions and private celebrations, with transparent pricing and a planning dashboard that keeps every detail in view." />
+  <link rel="canonical" href="https://marquee-events.example/index-2.html" />
+  <meta name="theme-color" content="#27402f" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Marquee — Event Packages & Signature Celebrations" />
+  <meta property="og:description" content="Signature event packages with transparent pricing and a planning dashboard that keeps every detail in view." />
+  <meta property="og:url" content="https://marquee-events.example/index-2.html" />
+  <meta property="og:image" content="../assets/images/ui/og-image.svg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Marquee — Event Packages & Signature Celebrations" />
+  <meta name="twitter:description" content="Signature event packages with transparent pricing and a planning dashboard." />
+  <meta name="twitter:image" content="../assets/images/ui/og-image.svg" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/ui/favicon.svg" />
+  <link rel="apple-touch-icon" href="../assets/images/ui/apple-touch-icon.svg" />
+
+  <!-- Font + hero preload -->
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/Jost-Regular.woff2" crossorigin />
+  <link rel="preload" as="image" href="../assets/images/content/gallery-3.svg" fetchpriority="high" />
+
+  <!-- Tailwind (layout utilities only) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { colors: { primary: { DEFAULT: 'var(--color-primary)' } } } }
+    };
+  </script>
+
+  <!-- Tabler Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+  <!-- Theme stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+
+  <!-- Pre-paint theme bootstrap (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('marquee-theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+        if (localStorage.getItem('marquee-dir') === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Marquee — Event Packages & Signature Celebrations",
+    "url": "https://marquee-events.example/index-2.html",
+    "description": "Signature event packages for weddings, corporate functions and private celebrations.",
+    "isPartOf": { "@type": "WebSite", "name": "Marquee", "url": "https://marquee-events.example" }
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true"><div class="spinner"></div></div>
+
+  <!-- ============================ NAVBAR ============================ -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="Marquee home">
+          <img src="../assets/images/ui/logo.svg" alt="Marquee" class="logo-light" width="168" height="40" />
+          <img src="../assets/images/ui/logo-dark.svg" alt="Marquee" class="logo-dark" width="168" height="40" />
+        </a>
+        <nav class="navbar__links" aria-label="Primary">
+          <div class="navbar__dropdown">
+            <a href="index.html" class="navbar__link navbar__dropdown-toggle" data-nav="home" aria-haspopup="true" aria-expanded="false">Home <i class="ti ti-chevron-down" aria-hidden="true" style="font-size:16px"></i></a>
+            <div class="navbar__dropdown-menu">
+              <a href="index.html">Home 1</a>
+              <a href="index-2.html">Home 2</a>
+            </div>
+          </div>
+          <a href="about.html" class="navbar__link">About</a>
+          <a href="services.html" class="navbar__link">Services</a>
+          <a href="gallery.html" class="navbar__link">Gallery</a>
+          <a href="blog.html" class="navbar__link">Blog</a>
+          <a href="contact.html" class="navbar__link">Contact</a>
+          <div class="navbar__dropdown">
+            <a href="dashboard-user.html" class="navbar__link navbar__dropdown-toggle" data-nav="dashboard" aria-haspopup="true" aria-expanded="false">Dashboard <i class="ti ti-chevron-down" aria-hidden="true" style="font-size:16px"></i></a>
+            <div class="navbar__dropdown-menu">
+              <a href="dashboard-user.html">Client Dashboard</a>
+              <a href="dashboard-admin.html">Admin Dashboard</a>
+            </div>
+          </div>
+        </nav>
+        <div class="navbar__actions">
+          <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="ti ti-moon" aria-hidden="true"></i>
+            <i class="ti ti-sun" aria-hidden="true"></i>
+          </button>
+          <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle right-to-left layout">RTL</button>
+          <a href="login.html" class="navbar__link navbar__auth-link">Log in</a>
+          <a href="signup.html" class="btn btn--primary navbar__cta">Sign up <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+          <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="ti ti-menu-2" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu">
+      <div class="mobile-menu__inner">
+        <a href="index.html">Home 1</a>
+        <a href="index-2.html">Home 2</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard-user.html">Client Dashboard</a>
+        <a href="dashboard-admin.html">Admin Dashboard</a>
+        <a href="login.html">Log in</a>
+        <a href="signup.html" class="btn btn--primary mobile-menu__cta">Sign up <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- SECTION: HERO (Hero-4 Bento Split) -->
+    <section class="section-hero" id="hero">
+      <div class="container">
+        <div class="split" style="align-items:center">
+          <div class="reveal">
+            <span class="eyebrow">Signature event packages</span>
+            <h1 class="display" style="margin:var(--space-2) 0">Choose your starting point. We craft the rest.</h1>
+            <p class="lead">Clear, all-in packages take the guesswork out of planning. Pick the scope that fits your celebration and our team builds it into something unmistakably yours.</p>
+            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;margin-top:var(--space-4)">
+              <a href="#packages" class="btn btn--accent btn--lg">See packages <i class="ti ti-arrow-down" aria-hidden="true"></i></a>
+              <a href="dashboard-user.html" class="btn btn--ghost btn--lg">Preview the dashboard</a>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <div class="bento">
+              <div class="bento__tall"><img src="../assets/images/content/gallery-3.svg" alt="Black-tie gala dinner in a grand hall" width="800" height="800" loading="eager" fetchpriority="high" /></div>
+              <div><img src="../assets/images/content/gallery-2.svg" alt="Corporate launch stage lighting" width="800" height="600" loading="lazy" /></div>
+              <div><img src="../assets/images/content/gallery-7.svg" alt="Conference main session" width="800" height="600" loading="lazy" /></div>
+              <div class="bento__wide"><img src="../assets/images/content/gallery-5.svg" alt="Vineyard long-table celebration at dusk" width="800" height="1000" loading="lazy" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END SECTION: HERO -->
+
+    <!-- SECTION: PACKAGES (Pricing, middle differentiated) -->
+    <section class="section-standard surface-alt" id="packages">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow" style="justify-content:center">Packages</span>
+          <h2>Transparent pricing, no hidden line items</h2>
+          <p>Every package includes your dashboard, a dedicated planner and full vendor coordination. Scale up whenever the moment calls for it.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="price-card reveal">
+            <span class="pill">Intimate</span>
+            <div class="price-card__amount">£4,500</div>
+            <p style="font-size:var(--fs-small)">For celebrations up to 50 guests that still deserve the full treatment.</p>
+            <ul class="price-card__list">
+              <li class="price-card__feat"><i class="ti ti-check" aria-hidden="true"></i> Dedicated planner</li>
+              <li class="price-card__feat"><i class="ti ti-check" aria-hidden="true"></i> Up to 6 vendor approvals</li>
+              <li class="price-card__feat"><i class="ti ti-check" aria-hidden="true"></i> Guest list & RSVP tools</li>
+              <li class="price-card__feat"><i class="ti ti-check" aria-hidden="true"></i> On-the-day coordination</li>
+            </ul>
+            <a href="contact.html" class="btn btn--ghost btn--block">Enquire</a>
+          </div>
+          <div class="price-card price-card--featured reveal reveal-delay-1">
+            <span class="pill pill--accent">Signature · Most chosen</span>
+            <div class="price-card__amount">£9,800</div>
+            <p class="price-card__feat" style="display:block">Our complete service for weddings and events up to 200 guests.</p>
+            <ul class="price-card__list">
+              <li class="price-card__feat"><i class="ti ti-check" aria-hidden="true"></i> Everything in Intimate</li>
+              <li class="price-card__feat"><i class="ti ti-check" aria-hidden="true"></i> Unlimited vendor approvals</li>
+              <li class="price-card__feat"><i class="ti ti-check" aria-hidden="true"></i> Full design & styling direction</li>
+              <li class="price-card__feat"><i class="ti ti-check" aria-hidden="true"></i> Budget tracking & reporting</li>
+              <li class="price-card__feat"><i class="ti ti-check" aria-hidden="true"></i> Two-person on-site team</li>
+            </ul>
+            <a href="contact.html" class="btn btn--accent btn--block">Start with Signature</a>
+          </div>
+          <div class="price-card reveal reveal-delay-2">
+            <span class="pill">Grand</span>
+            <div class="price-card__amount">Bespoke</div>
+            <p style="font-size:var(--fs-small)">Multi-day, multi-venue and large-scale corporate productions.</p>
+            <ul class="price-card__list">
+              <li class="price-card__feat"><i class="ti ti-check" aria-hidden="true"></i> Everything in Signature</li>
+              <li class="price-card__feat"><i class="ti ti-check" aria-hidden="true"></i> Multi-event scheduling</li>
+              <li class="price-card__feat"><i class="ti ti-check" aria-hidden="true"></i> Dedicated production crew</li>
+              <li class="price-card__feat"><i class="ti ti-check" aria-hidden="true"></i> Custom reporting & approvals</li>
+            </ul>
+            <a href="contact.html" class="btn btn--ghost btn--block">Request a quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END SECTION: PACKAGES -->
+
+    <!-- SECTION: STATS (Features-6, dark band, animated counters) -->
+    <section class="section-standard surface-dark" id="stats">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow" style="justify-content:center">By the numbers</span>
+          <h2>Fifteen years of gatherings, counted</h2>
+        </div>
+        <div class="grid grid-4" style="text-align:center">
+          <div class="reveal"><div class="stat__num" data-count="480" data-suffix="+">0</div><div class="stat__label">Events delivered</div></div>
+          <div class="reveal reveal-delay-1"><div class="stat__num" data-count="15">0</div><div class="stat__label">Years of craft</div></div>
+          <div class="reveal reveal-delay-2"><div class="stat__num" data-count="120" data-suffix="+">0</div><div class="stat__label">Trusted vendors</div></div>
+          <div class="reveal reveal-delay-3"><div class="stat__num" data-count="98" data-suffix="%">0</div><div class="stat__label">Would book again</div></div>
+        </div>
+      </div>
+    </section>
+    <!-- END SECTION: STATS -->
+
+    <!-- SECTION: TESTIMONIALS (Testimonials-1 Masonry) -->
+    <section class="section-standard" id="testimonials">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow" style="justify-content:center">Kind words</span>
+          <h2>Hosts who handed over the stress</h2>
+        </div>
+        <div class="masonry">
+          <figure class="testimonial-card reveal">
+            <div class="stars" aria-label="5 of 5"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+            <blockquote style="margin:var(--space-2) 0">"The Signature package was exactly right. We never felt upsold, just looked after."</blockquote>
+            <figcaption class="person"><img src="../assets/images/content/avatar-2.svg" alt="" class="avatar" width="48" height="48" /><span><span class="person__name">Marcus & Tom</span><br /><span class="person__role">Coastal Wedding</span></span></figcaption>
+          </figure>
+          <figure class="testimonial-card reveal reveal-delay-1">
+            <div class="stars" aria-label="5 of 5"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+            <blockquote style="margin:var(--space-2) 0">"Budget reporting I could forward straight to finance. That alone paid for itself. The event was beautiful, and somehow entirely on plan from first brief to last guest leaving."</blockquote>
+            <figcaption class="person"><img src="../assets/images/content/avatar-3.svg" alt="" class="avatar" width="48" height="48" /><span><span class="person__name">Daniel Osei</span><br /><span class="person__role">Northwind Events</span></span></figcaption>
+          </figure>
+          <figure class="testimonial-card reveal reveal-delay-2">
+            <div class="stars" aria-label="5 of 5"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+            <blockquote style="margin:var(--space-2) 0">"Approving vendors from my phone between meetings made the whole thing feel manageable."</blockquote>
+            <figcaption class="person"><img src="../assets/images/content/avatar-5.svg" alt="" class="avatar" width="48" height="48" /><span><span class="person__name">Sofia Marchetti</span><br /><span class="person__role">Anniversary Gala</span></span></figcaption>
+          </figure>
+          <figure class="testimonial-card reveal">
+            <div class="stars" aria-label="5 of 5"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+            <blockquote style="margin:var(--space-2) 0">"Genuinely the calmest large event I have hosted. Everything lived in one place."</blockquote>
+            <figcaption class="person"><img src="../assets/images/content/avatar-4.svg" alt="" class="avatar" width="48" height="48" /><span><span class="person__name">Priya Nair</span><br /><span class="person__role">60th Celebration</span></span></figcaption>
+          </figure>
+          <figure class="testimonial-card reveal reveal-delay-1">
+            <div class="stars" aria-label="5 of 5"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+            <blockquote style="margin:var(--space-2) 0">"Our launch had a board watching the budget and a hard date. Marquee delivered both."</blockquote>
+            <figcaption class="person"><img src="../assets/images/content/avatar-6.svg" alt="" class="avatar" width="48" height="48" /><span><span class="person__name">Aisha Bello</span><br /><span class="person__role">Helios Tech</span></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- END SECTION: TESTIMONIALS -->
+
+    <!-- SECTION: FEATURED WORK (selected events) -->
+    <section class="section-standard surface-alt" id="featured-work">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Selected work</span>
+          <h2>Three events, three very different briefs</h2>
+        </div>
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <div class="card__media aspect-4-3"><img src="../assets/images/content/gallery-1.svg" alt="Garden estate wedding ceremony" width="800" height="1000" loading="lazy" /></div>
+            <div class="card__body"><span class="pill">Wedding</span><h3 class="card__title" style="margin:var(--space-1) 0">A garden estate, 180 guests</h3><p style="font-size:var(--fs-small)">Two-marquee layout, full floral build and a rain plan nobody needed.</p></div>
+          </article>
+          <article class="card reveal reveal-delay-1">
+            <div class="card__media aspect-4-3"><img src="../assets/images/content/gallery-9.svg" alt="Awards ceremony stage" width="800" height="700" loading="lazy" /></div>
+            <div class="card__body"><span class="pill">Corporate</span><h3 class="card__title" style="margin:var(--space-1) 0">An awards night for 400</h3><p style="font-size:var(--fs-small)">Stage production, run-of-show and live budget tracking to the penny.</p></div>
+          </article>
+          <article class="card reveal reveal-delay-2">
+            <div class="card__media aspect-4-3"><img src="../assets/images/content/gallery-6.svg" alt="Intimate anniversary dinner" width="800" height="700" loading="lazy" /></div>
+            <div class="card__body"><span class="pill">Private</span><h3 class="card__title" style="margin:var(--space-1) 0">A 40th, two countries</h3><p style="font-size:var(--fs-small)">Travel, dietary needs and surprises, all coordinated from one dashboard.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- END SECTION: FEATURED WORK -->
+
+    <!-- SECTION: CTA (CTA-3 Split with Form) -->
+    <section class="section-standard" id="cta">
+      <div class="container">
+        <div class="split surface-dark" style="border-radius:var(--radius-xl);padding:var(--space-6);">
+          <div>
+            <span class="eyebrow">Start the conversation</span>
+            <h2 style="margin:var(--space-2) 0">Get availability for your date in a day</h2>
+            <ul style="display:flex;flex-direction:column;gap:var(--space-1);margin-top:var(--space-2)">
+              <li style="display:flex;gap:var(--space-1)"><i class="ti ti-check text-accent" aria-hidden="true"></i> No obligation, no hard sell</li>
+              <li style="display:flex;gap:var(--space-1)"><i class="ti ti-check text-accent" aria-hidden="true"></i> A real planner replies, not a bot</li>
+              <li style="display:flex;gap:var(--space-1)"><i class="ti ti-check text-accent" aria-hidden="true"></i> Tailored starting point and quote</li>
+            </ul>
+          </div>
+          <form id="newsletter-form-2" novalidate style="align-self:center;width:100%">
+            <label for="cta-email" class="label" style="color:var(--color-text-on-dark)">Your email</label>
+            <input type="email" id="cta-email" class="input" placeholder="you@email.com" autocomplete="email" />
+            <a href="contact.html" class="btn btn--accent btn--block btn--lg" style="margin-top:var(--space-2)">Plan your event <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            <p style="font-size:var(--fs-small);color:var(--color-text-on-dark-mut);margin-top:var(--space-2)">Prefer to talk? Call +44 20 7946 0123.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- END SECTION: CTA -->
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="../assets/images/ui/logo-dark.svg" alt="Marquee" width="168" height="40" />
+          <p>A full-service event management studio planning weddings, corporate events and private celebrations from concept to final toast.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Marquee on Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Marquee on Pinterest"><i class="ti ti-brand-pinterest" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Marquee on LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="blog.html">Journal</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <a href="services.html">Weddings</a>
+          <a href="services.html">Corporate</a>
+          <a href="services.html">Galas</a>
+          <a href="services.html">Private parties</a>
+        </div>
+        <div class="footer__col">
+          <h4>Stay in touch</h4>
+          <p style="font-size:var(--fs-small)">Seasonal planning notes and venue finds, a few times a year.</p>
+          <form class="footer__news" id="newsletter-form" novalidate>
+            <label for="news-email" class="sr-only">Email address</label>
+            <input type="email" id="news-email" name="email" placeholder="you@email.com" autocomplete="email" />
+            <button type="submit" class="btn btn--accent btn--block">Subscribe</button>
+            <span class="field__error" id="news-error" role="alert" aria-live="polite"></span>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Marquee Events Ltd. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="ti ti-arrow-up" aria-hidden="true"></i></button>
+
+  <!-- Cookie consent -->
+  <div class="cookie" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <p>We use a few cookies to understand how the site is used and to remember your theme. No tracking nonsense.</p>
+    <div class="cookie__actions">
+      <button class="btn btn--ghost" id="cookie-decline">Decline</button>
+      <button class="btn btn--primary" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+
+  <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

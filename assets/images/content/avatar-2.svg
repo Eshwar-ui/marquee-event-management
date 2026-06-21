@@ -1,0 +1,22 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a2533"/>
+      <stop offset="1" stop-color="#241620"/>
+    </linearGradient>
+    <radialGradient id="r" cx="0.3" cy="0.25" r="0.9">
+      <stop offset="0" stop-color="#d08a6a" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#d08a6a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#g)"/>
+  <rect width="400" height="400" fill="url(#r)"/>
+  <circle cx="366" cy="282" r="66" fill="#d08a6a" opacity="0.10"/>
+  <circle cx="134" cy="274" r="44" fill="#ffffff" opacity="0.06"/>
+  <circle cx="302" cy="239" r="80" fill="#d08a6a" opacity="0.07"/>
+  <g opacity="0.85" transform="translate(174,170)">
+    <path d="M26 0C11.6 0 2 9.6 2 22v26h48V22C50 9.6 40.4 0 26 0Z" fill="#ffffff" opacity="0.14"/>
+    <path d="M26 0C11.6 0 2 9.6 2 22c8 0 12-4.6 12-4.6S18 22 26 22s12-4.6 12-4.6S42 22 50 22C50 9.6 40.4 0 26 0Z" fill="#d08a6a" opacity="0.55"/>
+  </g>
+  <text x="200" y="378" text-anchor="middle" font-family="'Jost', system-ui, sans-serif" font-size="19" letter-spacing="3" fill="#ffffff" opacity="0.55" text-transform="uppercase"></text>
+</svg>

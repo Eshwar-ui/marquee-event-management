@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sign In — Marquee Dashboard</title>
+  <meta name="description" content="Sign in to your Marquee client dashboard to track event planning progress, approve vendors, manage your guest list and review your budget in one secure place." />
+  <link rel="canonical" href="https://marquee-events.example/login.html" />
+  <meta name="theme-color" content="#27402f" />
+  <meta name="robots" content="noindex" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sign In — Marquee Dashboard" />
+  <meta property="og:description" content="Sign in to your Marquee client dashboard." />
+  <meta property="og:url" content="https://marquee-events.example/login.html" />
+  <meta property="og:image" content="../assets/images/ui/og-image.svg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sign In — Marquee Dashboard" />
+  <meta name="twitter:description" content="Sign in to your Marquee client dashboard." />
+  <meta name="twitter:image" content="../assets/images/ui/og-image.svg" />
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/ui/favicon.svg" />
+  <link rel="apple-touch-icon" href="../assets/images/ui/apple-touch-icon.svg" />
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/Jost-Regular.woff2" crossorigin />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: { DEFAULT: 'var(--color-primary)' } } } } };</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('marquee-theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark');
+        if (localStorage.getItem('marquee-dir') === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <main id="main-content" class="auth">
+
+    <!-- Brand showcase panel -->
+    <aside class="auth__brand">
+      <img src="../assets/images/hero/hero-celebration-1024.svg" alt="" class="auth__brand-bg" aria-hidden="true" />
+      <div class="auth__brand-overlay"></div>
+      <div class="auth__brand-inner">
+        <a href="index.html" aria-label="Marquee home"><img src="../assets/images/ui/logo-dark.svg" alt="Marquee" width="168" height="40" /></a>
+
+        <div>
+          <span class="eyebrow">Your planning command centre</span>
+          <h2 class="display" style="margin:var(--space-2) 0 var(--space-4);font-size:var(--fs-4xl)">Every detail of your event, in one calm place.</h2>
+          <figure class="auth__quote">
+            <div class="stars" aria-label="5 out of 5 stars"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+            <blockquote style="margin-top:var(--space-2)">"Marquee took a 200-guest wedding that terrified us and made it feel weightless."</blockquote>
+            <figcaption class="person" style="margin-top:var(--space-3)"><img src="../assets/images/content/avatar-1.svg" alt="" class="avatar" width="48" height="48" /><span><span class="person__name" style="color:var(--color-text-on-dark)">Eloise Hartman</span><br /><span class="person__role" style="color:var(--color-text-on-dark-mut)">Garden Estate Wedding</span></span></figcaption>
+          </figure>
+          <div class="auth__trust">
+            <div><div class="stat__num">480+</div><div class="stat__label">Events delivered</div></div>
+            <div><div class="stat__num">4.9★</div><div class="stat__label">Client rating</div></div>
+            <div><div class="stat__num">15</div><div class="stat__label">Years</div></div>
+          </div>
+        </div>
+
+        <p style="font-size:var(--fs-small);color:var(--color-text-on-dark-mut)">© <span id="year"></span> Marquee Events Ltd.</p>
+      </div>
+    </aside>
+
+    <!-- Form panel -->
+    <section class="auth__form">
+      <div class="auth__card">
+        <a href="index.html" class="auth__back"><i class="ti ti-arrow-left" aria-hidden="true"></i> Back to website</a>
+        <a href="index.html" class="auth__logo-mobile" aria-label="Marquee home">
+          <img src="../assets/images/ui/logo.svg" alt="Marquee" class="logo-light" width="168" height="40" />
+          <img src="../assets/images/ui/logo-dark.svg" alt="Marquee" class="logo-dark" width="168" height="40" />
+        </a>
+        <h1 style="margin-bottom:var(--space-1)">Welcome back</h1>
+        <p style="margin-bottom:var(--space-4)">Sign in to pick up exactly where you left off.</p>
+
+        <div class="social-btns">
+          <button type="button" class="social-btn"><i class="ti ti-brand-google" aria-hidden="true"></i> Google</button>
+          <button type="button" class="social-btn"><i class="ti ti-brand-github" aria-hidden="true"></i> GitHub</button>
+        </div>
+        <div class="divider-or">or sign in with email</div>
+
+        <form id="login-form" novalidate>
+          <div class="form-alert form-alert--error" id="login-alert" role="alert" aria-live="polite"></div>
+          <div class="field">
+            <label class="label" for="login-email">Email address</label>
+            <input class="input" type="email" id="login-email" name="email" autocomplete="email" />
+            <span class="field__error" id="login-email-error" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label class="label" for="login-password">Password</label>
+            <div class="input-group">
+              <input class="input" type="password" id="login-password" name="password" autocomplete="current-password" />
+              <button type="button" class="icon-btn" id="login-pass-toggle" aria-label="Show password"><i class="ti ti-eye" aria-hidden="true"></i></button>
+            </div>
+            <span class="field__error" id="login-password-error" role="alert" aria-live="polite"></span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-3)">
+            <label class="checkbox-row" style="margin:0"><input type="checkbox" /> Remember me</label>
+            <a href="#" style="font-size:var(--fs-small);color:var(--color-primary)">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn--accent btn--block btn--lg" id="login-submit">Sign in</button>
+        </form>
+
+        <p class="auth__switch">New to Marquee? <a href="signup.html">Create an account</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

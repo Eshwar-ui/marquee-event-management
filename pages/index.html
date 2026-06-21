@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Marquee — Full-Service Event Management & Planning</title>
+  <meta name="description" content="Marquee is a full-service event management studio planning weddings, corporate events, galas and private celebrations. Track progress, approve vendors and manage every detail in one place." />
+  <link rel="canonical" href="https://marquee-events.example/index.html" />
+  <meta name="theme-color" content="#27402f" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Marquee — Full-Service Event Management & Planning" />
+  <meta property="og:description" content="Weddings, corporate events, galas and private celebrations, planned and coordinated end to end by the Marquee studio." />
+  <meta property="og:url" content="https://marquee-events.example/index.html" />
+  <meta property="og:image" content="../assets/images/ui/og-image.svg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Marquee — Full-Service Event Management & Planning" />
+  <meta name="twitter:description" content="Weddings, corporate events, galas and private celebrations, planned end to end." />
+  <meta name="twitter:image" content="../assets/images/ui/og-image.svg" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/ui/favicon.svg" />
+  <link rel="apple-touch-icon" href="../assets/images/ui/apple-touch-icon.svg" />
+
+  <!-- Font + hero preload -->
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/Jost-Regular.woff2" crossorigin />
+  <link rel="preload" as="image" href="../assets/images/hero/hero-celebration-1024.svg" fetchpriority="high" />
+
+  <!-- Tailwind (layout utilities only) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { colors: { primary: { DEFAULT: 'var(--color-primary)' } } } }
+    };
+  </script>
+
+  <!-- Tabler Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+  <!-- Theme stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+
+  <!-- Pre-paint theme bootstrap (prevents flash) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('marquee-theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+        if (localStorage.getItem('marquee-dir') === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Marquee",
+    "url": "https://marquee-events.example",
+    "logo": "https://marquee-events.example/assets/images/ui/og-image.svg",
+    "description": "Full-service event management studio for weddings, corporate events, galas and private celebrations.",
+    "sameAs": [
+      "https://instagram.com/marquee.events",
+      "https://pinterest.com/marquee.events",
+      "https://linkedin.com/company/marquee-events"
+    ],
+    "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "UK" }
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true"><div class="spinner"></div></div>
+
+  <!-- ============================ NAVBAR ============================ -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="Marquee home">
+          <img src="../assets/images/ui/logo.svg" alt="Marquee" class="logo-light" width="168" height="40" />
+          <img src="../assets/images/ui/logo-dark.svg" alt="Marquee" class="logo-dark" width="168" height="40" />
+        </a>
+        <nav class="navbar__links" aria-label="Primary">
+          <div class="navbar__dropdown">
+            <a href="index.html" class="navbar__link navbar__dropdown-toggle" data-nav="home" aria-haspopup="true" aria-expanded="false">Home <i class="ti ti-chevron-down" aria-hidden="true" style="font-size:16px"></i></a>
+            <div class="navbar__dropdown-menu">
+              <a href="index.html">Home 1</a>
+              <a href="index-2.html">Home 2</a>
+            </div>
+          </div>
+          <a href="about.html" class="navbar__link">About</a>
+          <a href="services.html" class="navbar__link">Services</a>
+          <a href="gallery.html" class="navbar__link">Gallery</a>
+          <a href="blog.html" class="navbar__link">Blog</a>
+          <a href="contact.html" class="navbar__link">Contact</a>
+          <div class="navbar__dropdown">
+            <a href="dashboard-user.html" class="navbar__link navbar__dropdown-toggle" data-nav="dashboard" aria-haspopup="true" aria-expanded="false">Dashboard <i class="ti ti-chevron-down" aria-hidden="true" style="font-size:16px"></i></a>
+            <div class="navbar__dropdown-menu">
+              <a href="dashboard-user.html">Client Dashboard</a>
+              <a href="dashboard-admin.html">Admin Dashboard</a>
+            </div>
+          </div>
+        </nav>
+        <div class="navbar__actions">
+          <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="ti ti-moon" aria-hidden="true"></i>
+            <i class="ti ti-sun" aria-hidden="true"></i>
+          </button>
+          <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle right-to-left layout">RTL</button>
+          <a href="login.html" class="navbar__link navbar__auth-link">Log in</a>
+          <a href="signup.html" class="btn btn--primary navbar__cta">Sign up <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+          <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="ti ti-menu-2" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu">
+      <div class="mobile-menu__inner">
+        <a href="index.html">Home 1</a>
+        <a href="index-2.html">Home 2</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard-user.html">Client Dashboard</a>
+        <a href="dashboard-admin.html">Admin Dashboard</a>
+        <a href="login.html">Log in</a>
+        <a href="signup.html" class="btn btn--primary mobile-menu__cta">Sign up <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- SECTION: HERO (Hero-2 Split) -->
+    <section class="section-hero" id="hero">
+      <div class="container">
+        <div class="split split--55">
+          <div class="reveal">
+            <span class="eyebrow">Full-service event studio</span>
+            <h1 class="display" style="margin:var(--space-2) 0">Events that feel<br />effortless, by design.</h1>
+            <p class="lead">From first toast to final dance, Marquee plans, designs and runs weddings, corporate events and private celebrations, so the day belongs entirely to you.</p>
+            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;margin-top:var(--space-4)">
+              <a href="contact.html" class="btn btn--accent btn--lg">Start planning <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+              <a href="gallery.html" class="btn btn--ghost btn--lg">View past events</a>
+            </div>
+            <div style="display:flex;gap:var(--space-5);margin-top:var(--space-5);flex-wrap:wrap">
+              <div><div class="stat__num" style="color:var(--color-primary);font-size:var(--fs-2xl)">480+</div><div style="font-size:var(--fs-small);color:var(--color-text-muted)">Events delivered</div></div>
+              <div><div class="stat__num" style="color:var(--color-primary);font-size:var(--fs-2xl)">15</div><div style="font-size:var(--fs-small);color:var(--color-text-muted)">Years of craft</div></div>
+              <div><div class="stat__num" style="color:var(--color-primary);font-size:var(--fs-2xl)">4.9★</div><div style="font-size:var(--fs-small);color:var(--color-text-muted)">Client rating</div></div>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <div class="media-frame aspect-3-2">
+              <img src="../assets/images/hero/hero-celebration-1024.svg"
+                   srcset="../assets/images/hero/hero-celebration-640.svg 640w, ../assets/images/hero/hero-celebration-1024.svg 1024w, ../assets/images/hero/hero-celebration-1920.svg 1920w"
+                   sizes="(min-width: 1024px) 45vw, 100vw"
+                   alt="A candle-lit reception with layered tablescapes and florals at a Marquee event"
+                   width="1024" height="576" loading="eager" fetchpriority="high" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END SECTION: HERO -->
+
+    <!-- SECTION: PROCESS (Features-4 Numbered Steps) -->
+    <section class="section-standard surface-alt" id="process">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How we work</span>
+          <h2>A calm, four-step path to a flawless day</h2>
+          <p>Every Marquee event follows the same considered rhythm, so nothing is left to chance and you always know exactly where things stand.</p>
+        </div>
+        <div class="grid grid-4">
+          <div class="step reveal">
+            <div class="step__num">01</div>
+            <h3 class="step__title">Consult</h3>
+            <p>We listen first, mapping your vision, guest count and budget into a clear brief and concept direction.</p>
+          </div>
+          <div class="step reveal reveal-delay-1">
+            <div class="step__num">02</div>
+            <h3 class="step__title">Design</h3>
+            <p>Moodboards, layouts and a curated vendor shortlist, all reviewable and approvable from your dashboard.</p>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <div class="step__num">03</div>
+            <h3 class="step__title">Coordinate</h3>
+            <p>Timelines, guest lists and budgets stay in sync while we manage every supplier on your behalf.</p>
+          </div>
+          <div class="step reveal reveal-delay-3">
+            <div class="step__num">04</div>
+            <h3 class="step__title">Celebrate</h3>
+            <p>On the day, our team runs the show end to end, so you are fully present for every moment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END SECTION: PROCESS -->
+
+    <!-- SECTION: ABOUT (Zigzag, image-left / text-right) -->
+    <section class="section-standard" id="about">
+      <div class="container">
+        <div class="split">
+          <div class="reveal">
+            <div class="media-frame aspect-4-3">
+              <img src="../assets/images/content/about-team.svg" alt="The Marquee planning team reviewing a floor plan together" width="900" height="700" loading="lazy" />
+            </div>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <span class="eyebrow">Why Marquee</span>
+            <h2>One studio, every detail, zero stress</h2>
+            <p>Most planning falls apart in the gaps between vendors. Marquee closes them. We are a single point of accountability from concept to clean-up, with a client dashboard that keeps the whole plan transparent.</p>
+            <ul style="display:flex;flex-direction:column;gap:var(--space-2);margin-top:var(--space-3)">
+              <li style="display:flex;gap:var(--space-2);align-items:flex-start"><span class="icon-wrap" style="width:42px;height:42px;flex-shrink:0"><i class="ti ti-checklist" aria-hidden="true"></i></span><span><strong>Live planning progress.</strong> Milestones and tasks update in real time, no chasing email threads.</span></li>
+              <li style="display:flex;gap:var(--space-2);align-items:flex-start"><span class="icon-wrap" style="width:42px;height:42px;flex-shrink:0"><i class="ti ti-users-group" aria-hidden="true"></i></span><span><strong>Approve vendors in a click.</strong> Review quotes and portfolios, then approve or decline from one place.</span></li>
+              <li style="display:flex;gap:var(--space-2);align-items:flex-start"><span class="icon-wrap" style="width:42px;height:42px;flex-shrink:0"><i class="ti ti-wallet" aria-hidden="true"></i></span><span><strong>Budgets that stay honest.</strong> Every line tracked against your cap, with no surprise on the final invoice.</span></li>
+            </ul>
+            <a href="about.html" class="btn btn--ghost" style="margin-top:var(--space-4)">More about the studio <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END SECTION: ABOUT -->
+
+    <!-- SECTION: GALLERY PREVIEW (Booking 5th-section, masonry teaser) -->
+    <section class="section-standard surface-alt" id="recent-events">
+      <div class="container">
+        <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:var(--space-2)">
+          <div>
+            <span class="eyebrow">Recent celebrations</span>
+            <h2>A look at events we have brought to life</h2>
+          </div>
+          <a href="gallery.html" class="btn btn--ghost">Full gallery <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="masonry">
+          <figure class="card reveal"><div class="card__media aspect-4-3"><img src="../assets/images/content/gallery-1.svg" alt="Outdoor garden wedding ceremony under a floral arch" width="800" height="1000" loading="lazy" /></div><figcaption class="card__body"><span class="pill">Wedding</span><h3 class="card__title" style="margin-top:var(--space-1)">Eloise & Ravi, Garden Estate</h3></figcaption></figure>
+          <figure class="card reveal reveal-delay-1"><div class="card__media aspect-3-2"><img src="../assets/images/content/gallery-2.svg" alt="Corporate product launch stage with branded lighting" width="800" height="600" loading="lazy" /></div><figcaption class="card__body"><span class="pill">Corporate</span><h3 class="card__title" style="margin-top:var(--space-1)">Northwind Product Launch</h3></figcaption></figure>
+          <figure class="card reveal reveal-delay-2"><div class="card__media aspect-1-1"><img src="../assets/images/content/gallery-3.svg" alt="Black-tie charity gala dinner in a grand hall" width="800" height="800" loading="lazy" /></div><figcaption class="card__body"><span class="pill">Gala</span><h3 class="card__title" style="margin-top:var(--space-1)">Lumen Foundation Gala</h3></figcaption></figure>
+          <figure class="card reveal"><div class="card__media aspect-4-3"><img src="../assets/images/content/gallery-5.svg" alt="Vineyard long-table dinner at golden hour" width="800" height="1000" loading="lazy" /></div><figcaption class="card__body"><span class="pill">Private</span><h3 class="card__title" style="margin-top:var(--space-1)">Vineyard Anniversary Dinner</h3></figcaption></figure>
+        </div>
+      </div>
+    </section>
+    <!-- END SECTION: GALLERY PREVIEW -->
+
+    <!-- SECTION: TESTIMONIALS (Testimonials-2 Pull Quote) -->
+    <section class="section-standard" id="testimonials">
+      <div class="container container-narrow" style="text-align:center">
+        <span class="eyebrow" style="justify-content:center">Kind words</span>
+        <div class="testimonial-slider" id="testimonial-slider">
+          <figure class="testimonial-slide" style="display:block">
+            <div class="stars" aria-label="5 out of 5 stars" style="justify-content:center;margin-bottom:var(--space-3)"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+            <blockquote class="quote-lg">"Marquee took a 200-guest wedding that terrified us and made it feel weightless. The dashboard meant we approved every vendor without a single frantic phone call."</blockquote>
+            <figcaption class="person" style="justify-content:center;margin-top:var(--space-4)"><img src="../assets/images/content/avatar-1.svg" alt="" class="avatar" width="48" height="48" /><span style="text-align:left"><span class="person__name">Eloise Hartman</span><br /><span class="person__role">Garden Estate Wedding</span></span></figcaption>
+          </figure>
+          <figure class="testimonial-slide" style="display:none">
+            <div class="stars" aria-label="5 out of 5 stars" style="justify-content:center;margin-bottom:var(--space-3)"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+            <blockquote class="quote-lg">"Our product launch had a hard deadline and a board watching the budget. Marquee delivered both, on the dot, with reporting we could actually forward upward."</blockquote>
+            <figcaption class="person" style="justify-content:center;margin-top:var(--space-4)"><img src="../assets/images/content/avatar-3.svg" alt="" class="avatar" width="48" height="48" /><span style="text-align:left"><span class="person__name">Daniel Osei</span><br /><span class="person__role">Northwind, Head of Events</span></span></figcaption>
+          </figure>
+          <figure class="testimonial-slide" style="display:none">
+            <div class="stars" aria-label="5 out of 5 stars" style="justify-content:center;margin-bottom:var(--space-3)"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+            <blockquote class="quote-lg">"They handled a milestone birthday for sixty across two countries. Guest lists, dietary needs, transport, all tracked in one tidy place. Genuinely the calmest event I have hosted."</blockquote>
+            <figcaption class="person" style="justify-content:center;margin-top:var(--space-4)"><img src="../assets/images/content/avatar-4.svg" alt="" class="avatar" width="48" height="48" /><span style="text-align:left"><span class="person__name">Priya Nair</span><br /><span class="person__role">60th Celebration</span></span></figcaption>
+          </figure>
+        </div>
+        <div style="display:flex;gap:var(--space-1);justify-content:center;margin-top:var(--space-4)">
+          <button class="icon-btn" id="testi-prev" aria-label="Previous testimonial"><i class="ti ti-arrow-left" aria-hidden="true"></i></button>
+          <button class="icon-btn" id="testi-next" aria-label="Next testimonial"><i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </section>
+    <!-- END SECTION: TESTIMONIALS -->
+
+    <!-- SECTION: CTA (CTA-1 Gradient Band, dark) -->
+    <section class="section-standard surface-dark" id="cta">
+      <div class="container" style="text-align:center">
+        <span class="eyebrow" style="justify-content:center">Let's begin</span>
+        <h2 style="max-width:18ch;margin:var(--space-2) auto var(--space-3)">Tell us about the day you are imagining</h2>
+        <p style="margin:0 auto var(--space-4)">Share a few details and we will follow up within one business day with availability and a tailored starting point.</p>
+        <div style="display:flex;gap:var(--space-2);justify-content:center;flex-wrap:wrap">
+          <a href="contact.html" class="btn btn--accent btn--lg">Plan your event <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+          <a href="services.html" class="btn btn--on-dark btn--lg">Explore packages</a>
+        </div>
+      </div>
+    </section>
+    <!-- END SECTION: CTA -->
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="../assets/images/ui/logo-dark.svg" alt="Marquee" width="168" height="40" />
+          <p>A full-service event management studio planning weddings, corporate events and private celebrations from concept to final toast.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Marquee on Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Marquee on Pinterest"><i class="ti ti-brand-pinterest" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Marquee on LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="blog.html">Journal</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <a href="services.html">Weddings</a>
+          <a href="services.html">Corporate</a>
+          <a href="services.html">Galas</a>
+          <a href="services.html">Private parties</a>
+        </div>
+        <div class="footer__col">
+          <h4>Stay in touch</h4>
+          <p style="font-size:var(--fs-small)">Seasonal planning notes and venue finds, a few times a year.</p>
+          <form class="footer__news" id="newsletter-form" novalidate>
+            <label for="news-email" class="sr-only">Email address</label>
+            <input type="email" id="news-email" name="email" placeholder="you@email.com" autocomplete="email" />
+            <button type="submit" class="btn btn--accent btn--block">Subscribe</button>
+            <span class="field__error" id="news-error" role="alert" aria-live="polite"></span>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Marquee Events Ltd. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="ti ti-arrow-up" aria-hidden="true"></i></button>
+
+  <!-- Cookie consent -->
+  <div class="cookie" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <p>We use a few cookies to understand how the site is used and to remember your theme. No tracking nonsense.</p>
+    <div class="cookie__actions">
+      <button class="btn btn--ghost" id="cookie-decline">Decline</button>
+      <button class="btn btn--primary" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+
+  <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

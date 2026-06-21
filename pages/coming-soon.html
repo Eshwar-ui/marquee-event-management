@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Coming Soon — Marquee Events</title>
+  <meta name="description" content="Something special is on its way from Marquee. Our new event management experience launches soon. Leave your email to be the first to know when we open the doors." />
+  <link rel="canonical" href="https://marquee-events.example/coming-soon.html" />
+  <meta name="theme-color" content="#27402f" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Coming Soon — Marquee Events" />
+  <meta property="og:description" content="Our new event management experience launches soon. Leave your email to be the first to know." />
+  <meta property="og:url" content="https://marquee-events.example/coming-soon.html" />
+  <meta property="og:image" content="../assets/images/ui/og-image.svg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Coming Soon — Marquee Events" />
+  <meta name="twitter:description" content="Our new event management experience launches soon." />
+  <meta name="twitter:image" content="../assets/images/ui/og-image.svg" />
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/ui/favicon.svg" />
+  <link rel="apple-touch-icon" href="../assets/images/ui/apple-touch-icon.svg" />
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/Jost-Regular.woff2" crossorigin />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: { DEFAULT: 'var(--color-primary)' } } } } };</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('marquee-theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark');
+        if (localStorage.getItem('marquee-dir') === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="surface-dark" style="min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--space-4)">
+  <main id="main-content" class="container container-narrow">
+    <a href="index.html" aria-label="Marquee home" style="display:inline-block;margin-bottom:var(--space-5)">
+      <img src="../assets/images/ui/logo-dark.svg" alt="Marquee" width="200" height="48" style="height:48px;width:auto;margin:0 auto" />
+    </a>
+    <span class="eyebrow" style="justify-content:center">Launching soon</span>
+    <h1 class="display" style="margin:var(--space-2) 0 var(--space-3)">Something worth celebrating is on its way</h1>
+    <p style="margin:0 auto var(--space-5);max-width:48ch">We are putting the finishing touches on a new way to plan, track and run your events. Leave your email and you will be first through the door.</p>
+
+    <!-- Countdown -->
+    <div id="countdown" data-target="2026-12-31T00:00:00" style="display:flex;gap:var(--space-3);justify-content:center;margin-bottom:var(--space-6)">
+      <div><div class="stat__num" id="cd-days">00</div><div class="stat__label">Days</div></div>
+      <div><div class="stat__num" id="cd-hours">00</div><div class="stat__label">Hours</div></div>
+      <div><div class="stat__num" id="cd-mins">00</div><div class="stat__label">Minutes</div></div>
+      <div><div class="stat__num" id="cd-secs">00</div><div class="stat__label">Seconds</div></div>
+    </div>
+
+    <!-- Email capture -->
+    <form id="coming-form" novalidate style="max-width:440px;margin:0 auto">
+      <div style="display:flex;gap:var(--space-1);flex-wrap:wrap">
+        <label for="coming-email" class="sr-only">Email address</label>
+        <input type="email" id="coming-email" class="input" placeholder="you@email.com" autocomplete="email" style="flex:1;min-width:200px" />
+        <button type="submit" class="btn btn--accent">Notify me</button>
+      </div>
+      <span class="field__error" id="coming-msg" role="alert" aria-live="polite" style="text-align:center"></span>
+    </form>
+
+    <!-- Social -->
+    <div class="footer__social" style="justify-content:center;margin-top:var(--space-5)">
+      <a href="#" aria-label="Marquee on Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
+      <a href="#" aria-label="Marquee on Pinterest"><i class="ti ti-brand-pinterest" aria-hidden="true"></i></a>
+      <a href="#" aria-label="Marquee on LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+    </div>
+  </main>
+
+  <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>
