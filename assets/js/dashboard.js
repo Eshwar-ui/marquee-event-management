@@ -6,6 +6,45 @@
 
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+const motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- Dashboard micro-interactions ---------- */
+(function () {
+  if (!motionOK) return;
+  $$('.btn, .icon-btn, .table-action').forEach((target) => {
+    if (target.dataset.microReady) return;
+    target.dataset.microReady = 'true';
+    target.addEventListener('pointerdown', (e) => {
+      if (target.disabled) return;
+      const rect = target.getBoundingClientRect();
+      const ripple = document.createElement('span');
+      ripple.className = 'btn__ripple';
+      ripple.style.left = (e.clientX - rect.left) + 'px';
+      ripple.style.top = (e.clientY - rect.top) + 'px';
+      target.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove(), { once: true });
+    });
+  });
+})();
+
+/* ---------- Dashboard data motion ---------- */
+(function () {
+  const motionEls = $$('.bar, .chart-bars, .kpi');
+  if (!motionEls.length) return;
+  if (!motionOK || !('IntersectionObserver' in window)) {
+    motionEls.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '0px 0px -30px 0px' });
+  motionEls.forEach((el) => io.observe(el));
+})();
 
 /* ---------- Sidebar overlay (mobile) ---------- */
 (function () {
@@ -33,30 +72,18 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
   });
 })();
 
-/* ---------- Sidebar active link (scroll spy + click) ---------- */
+/* ---------- Sidebar active link (current page) ---------- */
 (function () {
-  const links = $$('.dash-nav__link').filter((l) => (l.getAttribute('href') || '').startsWith('#'));
-  if (!links.length) return;
-  const setActive = (link) => {
-    links.forEach((l) => l.classList.toggle('is-active', l === link));
-  };
-  links.forEach((link) => {
-    link.addEventListener('click', () => setActive(link));
+  const links = $$('.dash-nav__link').filter((l) => {
+    const href = l.getAttribute('href') || '';
+    return href && href !== '#';
   });
-  const sections = links
-    .map((l) => document.getElementById(l.getAttribute('href').slice(1)))
-    .filter(Boolean);
-  if ('IntersectionObserver' in window && sections.length) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const link = links.find((l) => l.getAttribute('href') === '#' + entry.target.id);
-          if (link) setActive(link);
-        }
-      });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-    sections.forEach((s) => io.observe(s));
-  }
+  if (!links.length) return;
+  const current = window.location.pathname.split('/').pop() || 'dashboard-user.html';
+  links.forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    link.classList.toggle('is-active', href === current);
+  });
 })();
 
 /* ---------- Vendor approve / decline ---------- */
@@ -82,6 +109,9 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
         actionCell.textContent = '—';
         actionCell.style.color = 'var(--color-text-muted)';
       }
+      row.classList.remove('is-updated');
+      void row.offsetWidth;
+      row.classList.add('is-updated');
     });
   });
 })();
@@ -136,6 +166,7 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
       bindRemove(rmBtn);
       actionTd.appendChild(rmBtn);
       row.appendChild(actionTd);
+      row.classList.add('is-new');
       tbody.appendChild(row);
     });
   }
