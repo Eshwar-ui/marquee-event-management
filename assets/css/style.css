@@ -1173,3 +1173,41 @@ button { cursor: pointer; background: none; border: none; }
   .table tbody tr.is-updated,
   .btn__ripple { animation: none !important; }
 }
+
+/* -------------------------------------------------------------
+   13. ADDED MICRO-MOTION  (subtle, opt-out via reduced-motion)
+   ------------------------------------------------------------- */
+
+/* Scroll progress bar (injected by main.js) */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  z-index: 2000;
+  pointer-events: none;
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* Hero image breathes gently */
+.section-hero .media-frame { animation: hero-float 7s var(--ease-out-quart) infinite; }
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-9px); }
+}
+
+/* Arrow icons nudge forward on hover (CTAs, "read more" links) */
+.btn i.ti-arrow-right,
+.link-arrow i.ti-arrow-right { transition: transform var(--t-fast) var(--ease-spring); }
+.btn:hover i.ti-arrow-right,
+.link-arrow:hover i.ti-arrow-right { transform: translateX(4px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress { display: none; }
+  .section-hero .media-frame { animation: none !important; }
+}

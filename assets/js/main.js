@@ -238,6 +238,23 @@ $$('.accordion__trigger').forEach((trigger) => {
   show(0); start();
 })();
 
+/* ---------- Scroll progress bar ---------- */
+if (motionOK) {
+  const bar = document.createElement('div');
+  bar.className = 'scroll-progress';
+  bar.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(bar);
+  const update = () => {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - doc.clientHeight;
+    const p = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+    bar.style.transform = `scaleX(${p})`;
+  };
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+}
+
 /* ---------- Back to top ---------- */
 const backTop = $('#back-to-top');
 if (backTop) {
